@@ -1,0 +1,1128 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ESRI.ArcGIS.Client.WebMap</name>
+    </assembly>
+    <members>
+        <member name="T:ESRI.ArcGIS.Client.Toolkit.Utilities.CodedValueSource">
+            <summary>
+            *FOR INTERNAL USE ONLY* The CodedValueSource class.
+            </summary>
+            <remarks>Used to populate each entry in the coded value domain.</remarks>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.Toolkit.Utilities.CodedValueSource.Code">
+            <summary>
+            Gets or sets the code.
+            </summary>
+            <value>The code.</value>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.Toolkit.Utilities.CodedValueSource.DisplayName">
+            <summary>
+            Gets or sets the display name.
+            </summary>
+            <value>The display name.</value>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.Toolkit.Utilities.CodedValueSource.Temp">
+            <summary>
+            Gets or sets a true or false value indicating if this item is a 
+            temporary place holder item.
+            </summary>		
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.Toolkit.Utilities.CodedValueSource.Name">
+            <summary>
+            <para>
+            <b>Note: This API is now obsolete.</b> Use the FieldDomain.DisplayName property.
+            </para>
+            <para>
+            Gets or sets the display name. This property is now obsolete because 
+            it is not usable in XAML where Name is reserved for framework elements.
+            Use DisplayName property instead. Setting this property will Set the 
+            DisplayName property.
+            </para>
+            </summary>
+            <value>The display name.</value>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.Toolkit.Utilities.CodedValueSources">
+            <summary>
+            *FOR INTERNAL USE ONLY* The CodedValueSources class.
+            </summary>
+            <remarks>Used to maintain collection of coded value domains.</remarks>	
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.Toolkit.Utilities.CodedValueSources.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ESRI.ArcGIS.Client.Toolkit.Utilities.CodedValueSources"/> class.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.Toolkit.Utilities.DynamicCodedValueSource">
+            <summary>
+            *FOR INTERNAL USE ONLY* DynamicCodedValueSource is used to hold CodedValueSources 
+            that change depending on the a value of another graphic attribute. 
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.Toolkit.Utilities.CodedValueDomainConverter">
+            <summary>
+            *FOR INTERNAL USE ONLY* The CodedValueDomainConverter class.
+            </summary>
+            <remarks>Converts codes/values in the given coded value domain.</remarks>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.Toolkit.Utilities.CodedValueDomainConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the source data before passing it to the target for display in the UI.
+            </summary>
+            <param name="value">The source data being passed to the target.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the target dependency property.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the target dependency property.
+            </returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.Toolkit.Utilities.CodedValueDomainConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the target data before passing it to the source object.  This method is called only in <see cref="F:System.Windows.Data.BindingMode.TwoWay"/> bindings.
+            </summary>
+            <param name="value">The target data being passed to the source.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the source object.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the source object.
+            </returns>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.Toolkit.Utilities.CodedValueSourceConverter">
+            <summary>
+            The CodedValueSourceConverter class.
+            </summary>
+            <remarks>Converts codes/values in the given coded value domain.</remarks>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.Toolkit.Utilities.CodedValueSourceConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the source data before passing it to the target for display in the UI.
+            </summary>
+            <param name="value">The source data being passed to the target.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the target dependency property.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the target dependency property.
+            </returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.Toolkit.Utilities.CodedValueSourceConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the target data before passing it to the source object.  This method is called only in <see cref="F:System.Windows.Data.BindingMode.TwoWay"/> bindings.
+            </summary>
+            <param name="value">The target data being passed to the source.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the source object.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the source object.
+            </returns>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.Toolkit.Utilities.CodedValueSourceConverter.Field">
+            <summary>
+            Gets or sets the field. The graphic attribute field that should be 
+            used for the conversion. 
+            </summary>
+            <value>The field.</value>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.Toolkit.Utilities.DynamicCodedValueSourceConverter">
+            <summary>
+            *FOR INTERNAL USE ONLY* The DynamicCodedValueSourceConverter class.
+            </summary>
+            <remarks>Converts codes/values in the given coded value domain based on 
+            the current value of the lookup field.</remarks>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.Toolkit.Utilities.DynamicCodedValueSourceConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the source data before passing it to the target for display in the UI.
+            </summary>
+            <param name="value">The source data being passed to the target.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the target dependency property.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the target dependency property.
+            </returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.Toolkit.Utilities.DynamicCodedValueSourceConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the target data before passing it to the source object.  This method is called only in <see cref="F:System.Windows.Data.BindingMode.TwoWay"/> bindings.
+            </summary>
+            <param name="value">The target data being passed to the source.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the source object.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the source object.
+            </returns>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.Toolkit.Utilities.DynamicCodedValueSourceConverter.LookupField">
+            <summary>
+            Gets or sets the lookup field.
+            </summary>
+            <value>The lookup field.</value>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.Toolkit.Utilities.DynamicCodedValueSourceConverter.Field">
+            <summary>
+            Gets or sets the field. this field is dependent on the lookup field.
+            </summary>
+            <value>The field.</value>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.Toolkit.Utilities.CodedValueSourceLookupConverter">
+            <summary>
+            The CodedValueSourceConverter class.
+            </summary>
+            <remarks>Converts codes/values in the given coded value domain.</remarks>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.Toolkit.Utilities.CodedValueSourceLookupConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the source data before passing it to the target for display in the UI.
+            </summary>
+            <param name="value">The source data being passed to the target.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the target dependency property.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the target dependency property.
+            </returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.Toolkit.Utilities.CodedValueSourceLookupConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the target data before passing it to the source object.  This method is called only in <see cref="F:System.Windows.Data.BindingMode.TwoWay"/> bindings.
+            </summary>
+            <param name="value">The target data being passed to the source.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the source object.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the source object.
+            </returns>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.Toolkit.Utilities.DynamicCodedValueSourceLookupConverter">
+            <summary>
+            *FOR INTERNAL USE ONLY* The DynamicCodedValueSourceConverter class.
+            </summary>
+            <remarks>Converts codes/values in the given coded value domain based on 
+            the current value of the lookup field.</remarks>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.Toolkit.Utilities.DynamicCodedValueSourceLookupConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the source data before passing it to the target for display in the UI.
+            </summary>
+            <param name="value">The source data being passed to the target.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the target dependency property.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the target dependency property.
+            </returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.Toolkit.Utilities.DynamicCodedValueSourceLookupConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the target data before passing it to the source object.  This method is called only in <see cref="F:System.Windows.Data.BindingMode.TwoWay"/> bindings.
+            </summary>
+            <param name="value">The target data being passed to the source.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the source object.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the source object.
+            </returns>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.Toolkit.Utilities.DynamicCodedValueSourceLookupConverter.LookupField">
+            <summary>
+            Gets or sets the lookup field.
+            </summary>
+            <value>The lookup field.</value>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.Toolkit.Utilities.DynamicCodedValueSourceLookupConverter.Field">
+            <summary>
+            Gets or sets the Field information
+            </summary>
+            <value>The Field information</value>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Charting.ColumnChart">
+            <summary>
+            FOR INTERNAL USE ONLY. Column chart. 
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart">
+            <summary>
+            FOR INTERNAL USE ONLY. Base class for charts. 
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart"/> class.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.#cctor">
+            <summary>
+            Static initialization for the <see cref="T:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart"/> control.
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.FieldsProperty">
+            /// <summary>
+            Identifies the <see cref="P:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.Fields"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.KeyToLabelDictionaryProperty">
+            /// <summary>
+            Identifies the <see cref="P:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.KeyToLabelDictionary"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.ItemsSourceProperty">
+            <summary>
+            Identifies the <see cref="P:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.ItemsSource"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application
+            code or internal processes (such as a rebuilding layout pass) call
+            <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>. In
+            simplest terms, this means the method is called just before a UI 
+            element displays in an application.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.MeasureOverride(System.Windows.Size)">
+            <summary>
+            Overrides MeasureOverride
+            </summary>
+            <param name="availableSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.SetTooltip(System.Windows.DependencyObject,System.String,System.String)">
+            <summary>
+             Set the tooltip of a data point
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.GenerateChart">
+            <summary>
+            Generates the chart from the ItemsSource
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.InvalidateChart">
+            <summary>
+            Invalidates the chart
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.GetColorByIndex(System.Int32)">
+            <summary>
+            Returns a color by index
+            </summary>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.FormattedValue(System.Double)">
+            <summary>
+            Returns a double value formatted to be displayed in axis or tooltip.
+            </summary>
+            <param name="value"></param>
+            <returns>Label</returns>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.Fields">
+            <summary>
+             Fields displayed into the chart (e.g Field1,Field2,Field3 or  Field1,Field2,Field3_::_NormalizeField)
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.KeyToLabelDictionary">
+            <summary>
+             Dictionary with the labels by field.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.ItemsSource">
+            <summary>
+             Dictionary with the values to display in the chart
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.ForegroundColor">
+            <summary>
+             Color for chart axis and stroke of line chart points
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Charting.BaseChart.RootElement">
+            <summary>
+            Root element of the control
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Charting.ColumnChart.GenerateChart">
+            <summary>
+            Generates the column chart.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Properties.Resources.BingMapsSerializer_InvalidLayerType">
+            <summary>
+              Looks up a localized string similar to Invalid layer type..
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Properties.Resources.MapConfiguration_InvalidDocument">
+            <summary>
+              Looks up a localized string similar to Invalid &apos;WebMap&apos; document..
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Charting.BarChart">
+            <summary>
+            FOR INTERNAL USE ONLY. Bar chart. 
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Charting.BarChart.GenerateChart">
+            <summary>
+            Generates the bar chart.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Popup.ItemSelector">
+            <summary>
+            FOR INTERNAL USE ONLY. Navigate though a list a items showing only one item at a time.. 
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Popup.ItemSelector.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ESRI.ArcGIS.Client.WebMap.Popup.ItemSelector"/> class.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Popup.ItemSelector.#cctor">
+            <summary>
+            Static initialization for the <see cref="T:ESRI.ArcGIS.Client.WebMap.Popup.ItemSelector"/> control.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Popup.ItemSelector.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or
+            internal processes (such as a rebuilding layout pass) call
+            <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Popup.FieldDomainCollection">
+            <summary>
+            FieldDomainCollection is used in Popup DataTemplate which is loaded using xaml loader at runtime.
+            This is intended for internal use only.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Serializers.Layers.KmlSerializer">
+            <summary>
+            Deserializes a KML Layer from the Web Map Document (added v1.3 of the WebMap Spec).
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Serializers.Layers.KmlSerializer.Deserialize(System.Collections.Generic.IDictionary{System.String,System.Object},ESRI.ArcGIS.Client.Geometry.SpatialReference,System.Action{ESRI.ArcGIS.Client.Layer,ESRI.ArcGIS.Client.Geometry.SpatialReference})">
+            <summary>
+            Deserializes the specified properties.
+            </summary>
+            <param name="properties">The properties.</param>
+            <param name="sref">The sref.</param>
+            <param name="onComplete">The on complete.</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Serializers.Layers.KmlSerializer.TypeID">
+            <summary>
+            Gets the type ID.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Charting.LineChart">
+            <summary>
+            FOR INTERNAL USE ONLY. Line chart. 
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Charting.LineChart.GenerateChart">
+            <summary>
+            Generates the line chart.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Popup.ItemSelectorItem">
+            <summary>
+            FOR INTERNAL USE ONLY. ItemSelector item with an header and a content. 
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Popup.ItemSelectorItem.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ESRI.ArcGIS.Client.WebMap.Popup.ItemSelectorItem"/> class.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Popup.ItemSelectorItem.#cctor">
+            <summary>
+            Static initialization for the <see cref="T:ESRI.ArcGIS.Client.WebMap.Popup.ItemSelectorItem"/> control.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Popup.ItemSelectorItem.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or
+            internal processes (such as a rebuilding layout pass) call
+            <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>.
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.Client.WebMap.Popup.ItemSelectorItem.HeaderProperty">
+            /// <summary>
+            Identifies the <see cref="P:ESRI.ArcGIS.Client.WebMap.Popup.ItemSelectorItem.Header"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.ItemSelectorItem.Header">
+            <summary>
+            Gets or sets the content for the header of the control.
+            </summary>
+            <value>
+            The content for the header of the control. The default value is
+            null.
+            </value>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.ItemInfo">
+            <summary>
+            Document Item Info Metadata
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.ItemInfo.ID">
+            <summary>Gets the Item ID.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.ItemInfo.Item">
+            <summary>Gets the item name.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.ItemInfo.ItemType">
+            <summary>Gets the Item type.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.ItemInfo.Owner">
+            <summary>Gets the owner.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.ItemInfo.Uploaded">
+            <summary>Gets the date the item was uploaded.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.ItemInfo.Title">
+            <summary>Gets the item title.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.ItemInfo.Description">
+            <summary>Gets the description.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.ItemInfo.Thumbnail">
+            <summary>Gets the thumbnail.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.ItemInfo.Extent">
+            <summary>Gets the startup extent.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.ItemInfo.Tags">
+            <summary>Gets the tags.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.ItemInfo.Type">
+            <summary>Gets the type.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.ItemInfo.Snippet">
+            <summary>Gets the snippet.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.ItemInfo.LicenseInfo">
+            <summary>Gets the license info.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.ItemInfo.AccessInformation">
+            <summary>Gets the access information.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.ItemInfo.NumberOfComments">
+            <summary>Gets the number of comments.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.ItemInfo.NumberOfRatings">
+            <summary>Gets the number of ratings.</summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.ItemInfo.AverageRating">
+            <summary>Gets the average rating.</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Serializers.Layers.WmsSerializer">
+            <summary>
+            Deserializes a WMS Layer from the Web Map Document (added v1.3 of the WebMap Spec).
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Serializers.Layers.WmsSerializer.Deserialize(System.Collections.Generic.IDictionary{System.String,System.Object},ESRI.ArcGIS.Client.Geometry.SpatialReference,System.Action{ESRI.ArcGIS.Client.Layer,ESRI.ArcGIS.Client.Geometry.SpatialReference})">
+            <summary>
+            Deserializes the specified properties.
+            </summary>
+            <param name="properties">The properties.</param>
+            <param name="sref">The sref.</param>
+            <param name="onComplete">The on complete.</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Serializers.Layers.WmsSerializer.TypeID">
+            <summary>
+            Gets the type ID.
+            </summary>
+            <value>The type ID.</value>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo">
+            <summary>
+            Contains information about the popup information for a <see cref="T:ESRI.ArcGIS.Client.FeatureLayer"/>.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.Title">
+            <summary>
+            The title of the <see cref="T:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo"/>.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.Description">
+            <summary>
+            The description of the <see cref="T:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo"/>.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.ShowAttachments">
+            <summary>
+            Indicates whether attachments should be shown in the <see cref="T:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo"/>.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.FieldInfos">
+            <summary>
+            The collection of <see cref="T:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.FieldInfo"/> associated with the <see cref="T:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo"/>.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.MediaInfos">
+            <summary>
+            The collection of <see cref="T:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.MediaInfo"/> associated with the <see cref="T:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo"/>.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.LayerInfo">
+            <summary>
+            FeatureLayer info used to find CodedValue domains for display text.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.PopupInfoTemplate">
+            <summary>
+            The layout template of the <see cref="T:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo"/>.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.MediaType">
+            <summary>
+            Describes the media type associated with the <see cref="T:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo"/>.
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.MediaType.Image">
+            <summary>Image</summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.MediaType.ColumnChart">
+            <summary>Column chart</summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.MediaType.PieChart">
+            <summary>Pie chart</summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.MediaType.LineChart">
+            <summary>Line chart</summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.MediaType.BarChart">
+            <summary>Bar chart</summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.FieldInfo">
+            <summary>
+            Contains information about fields that are used in the <see cref="T:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo"/>.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.FieldInfo.FieldName">
+            <summary>
+            The name of the field.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.FieldInfo.Label">
+            <summary>
+            The field label.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.FieldInfo.Formatter">
+            <summary>
+            Format string to be used for the field value.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.FieldInfo.Visible">
+            <summary>
+            The value indicating whether this <see cref="T:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.FieldInfo"/> is visible.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.FieldInfo.IsEditable">
+            <summary>
+            The value indicating whether this instance of the <see cref="T:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.FieldInfo"/> is editable.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.FieldInfo.Tooltip">
+            <summary>
+            The tooltip text associated with the <see cref="T:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.FieldInfo"/>.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.MediaInfo">
+            <summary>
+            Contains information about media information that are used in the <see cref="T:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo"/>.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.MediaInfo.Title">
+            <summary>
+            The title of the media.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.MediaInfo.Caption">
+            <summary>
+            The caption of the media.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.MediaInfo.Type">
+            <summary>
+            The type of the media.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.PopupInfo.MediaInfo.Value">
+            <summary>
+            The value of the media.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Popup.HtmlToPlainTextConverter">
+            <summary>
+            FOR INTERNAL USE ONLY. Removes HTML from attribute values.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Popup.HtmlToPlainTextConverter.System#Windows#Data#IValueConverter#Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the source data before passing it to the target for display in the UI.
+            </summary>
+            <param name="value">The source data being passed to the target.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the target dependency property.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the target dependency property.
+            </returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Popup.HtmlToPlainTextConverter.System#Windows#Data#IValueConverter#ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the target data before passing it to the source object.  This method is called only in <see cref="F:System.Windows.Data.BindingMode.TwoWay"/> bindings.
+            </summary>
+            <param name="value">The target data being passed to the source.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the source object.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the source object.
+            </returns>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.HtmlToPlainTextConverter.LookupField">
+            <summary>
+            Gets or sets the lookup field.
+            </summary>
+            <value>The lookup field.</value>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.HtmlToPlainTextConverter.FieldDomainCollection">
+            <summary>
+            Gets or sets the field domain collection.
+            </summary>
+            <value>The field domain collection.</value>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Popup.UrlAttributeConverter">
+            <summary>
+            FOR INTERNAL USE ONLY. Creates a string url from an attribute dictionary
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Popup.UrlAttributeConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the source data before passing it to the target for display in the UI.
+            </summary>
+            <param name="value">The source data being passed to the target.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the target dependency property.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the target dependency property.
+            </returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Popup.UrlAttributeConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the target data before passing it to the source object.  This method is called only in <see cref="F:System.Windows.Data.BindingMode.TwoWay"/> bindings.
+            </summary>
+            <param name="value">The target data being passed to the source.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the source object.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the source object.
+            </returns>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Popup.LabelAttributeConverter">
+            <summary>
+            FOR INTERNAL USE ONLY. Custom label/attribute value converter for the popup content of web map documents.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Popup.LabelAttributeConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the source data before passing it to the target for display in the UI.
+            </summary>
+            <param name="value">The source data being passed to the target.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the target dependency property.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the target dependency property.
+            </returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Popup.LabelAttributeConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the target data before passing it to the source object.  This method is called only in <see cref="F:System.Windows.Data.BindingMode.TwoWay"/> bindings.
+            </summary>
+            <param name="value">The target data being passed to the source.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the source object.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the source object.
+            </returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Popup.LabelAttributeConverter.GetInlineCollection(System.Windows.DependencyObject)">
+            <summary>
+            Gets the Inline collection from the dependency object.
+            </summary>
+            <param name="obj">DependencyObject that should be searched for the attached property.</param>
+            <returns>A collection of Inline objects found attached to the DependencyObject.</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Popup.LabelAttributeConverter.SetInlineCollection(System.Windows.DependencyObject,System.Collections.Generic.IEnumerable{System.Windows.Documents.Inline})">
+            <summary>
+            Sets a collection of Inline object to a DependencyObject
+            </summary>
+            <param name="obj">The DependencyObject to set the collection of Inline object to.</param>
+            <param name="value">The Inline object collection to be set to the DependencyObject.</param>
+        </member>
+        <member name="F:ESRI.ArcGIS.Client.WebMap.Popup.LabelAttributeConverter.InlineCollectionProperty">
+            <summary>
+            Attached property that holds a collection of Inline objects.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.LabelAttributeConverter.LookupField">
+            <summary>
+            Gets or sets the lookup field.
+            </summary>
+            <value>The lookup field.</value>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Popup.LabelAttributeConverter.FieldDomainCollection">
+            <summary>
+            Gets or sets the field domain collection.
+            </summary>
+            <value>The field domain collection.</value>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.GetItemCompletedEventArgs">
+            <summary>
+            EventArgument for the <see cref="E:ESRI.ArcGIS.Client.WebMap.Document.GetItemCompleted"/> event.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.GetItemCompletedEventArgs.ItemInfo">
+            <summary>
+            Gets the web document metadata.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.GetItemCompletedEventArgs.Error">
+            <summary>
+            Gets a value that indicates which error occurred during an asynchronous operation.
+            </summary>
+            <value>
+            An <see cref="T:System.Exception"/> instance, if an error occurred
+            during an asynchronous operation; otherwise null.
+            </value>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.GetItemCompletedEventArgs.UserState">
+            <summary>
+            Gets the unique identifier for the asynchronous task.
+            </summary>
+            <value>An object reference that uniquely identifies the asynchronous 
+            task; otherwise, null if no value has been set..</value>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Charting.ChartConverter">
+            <summary>
+            Converts and filters the attributes for use with displaying charting in popup.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Charting.ChartConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the source data before passing it to the target for display in the UI.
+            </summary>
+            <param name="value">The source data being passed to the target.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the target dependency property.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the target dependency property.
+            </returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Charting.ChartConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Modifies the target data before passing it to the source object.  This method is called only in <see cref="F:System.Windows.Data.BindingMode.TwoWay"/> bindings.
+            </summary>
+            <param name="value">The target data being passed to the source.</param>
+            <param name="targetType">The <see cref="T:System.Type"/> of data expected by the source object.</param>
+            <param name="parameter">An optional parameter to be used in the converter logic.</param>
+            <param name="culture">The culture of the conversion.</param>
+            <returns>
+            The value to be passed to the source object.
+            </returns>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Charting.PieChart">
+            <summary>
+            FOR INTERNAL USE ONLY. Pie chart. 
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Charting.PieChart.GenerateChart">
+            <summary>
+            Generates the pie chart.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.GetMapCompletedEventArgs">
+            <summary>
+            EventArgument for the <see cref="E:ESRI.ArcGIS.Client.WebMap.Document.GetMapCompleted"/> event.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.GetMapCompletedEventArgs.Map">
+            <summary>
+            Gets the map.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.GetMapCompletedEventArgs.DocumentValues">
+            <summary>
+            Gets the raw dictionary values that the web document contains
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.GetMapCompletedEventArgs.SpatialReference">
+            <summary>
+            Gets the suggested spatial reference for the map.
+            </summary>
+        </member>
+        <member name="T:ESRI.ArcGIS.Client.WebMap.Document">
+            <summary>
+            Class for generating a map based on the ArcGIS Geowarehouse 
+            web map document.
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.Client.WebMap.Document.IsBaseMapProperty">
+            <summary>
+            Indicates whether the layer is a base map layer in the web map document.
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.Client.WebMap.Document.WebMapDataProperty">
+            <summary>
+            The data associated with the layer in the web map document.
+            </summary>
+        </member>
+        <member name="F:ESRI.ArcGIS.Client.WebMap.Document.PopupTemplatesProperty">
+            <summary>
+            The popup DataTemplate for map service layers.
+            </summary>
+            <remarks>
+            <para>
+            This is an attached property on the 
+            <see cref="T:ESRI.ArcGIS.Client.ArcGISDynamicMapServiceLayer">ArcGISDynamicMapServiceLayer</see> and 
+            <see cref="T:ESRI.ArcGIS.Client.ArcGISTiledMapServiceLayer">ArcGISTiledMapServiceLayer</see>. 
+            It references a Dictionary of DataTemplates.
+            </para>
+            </remarks>
+        </member>
+        <member name="F:ESRI.ArcGIS.Client.WebMap.Document.PopupTemplateProperty">
+            <summary>
+            The popup DataTemplate for a GraphicsLayer.
+            </summary>
+            <remarks>
+            <para>
+            This is an attached property on the <see cref="T:ESRI.ArcGIS.Client.GraphicsLayer">GraphicsLayer</see> 
+            (feature collection in a webmap) or <see cref="T:ESRI.ArcGIS.Client.GraphicsLayer">FeatureLayer</see> 
+            (feature layer in a map or feature service).
+            </para>
+            </remarks>
+        </member>
+        <member name="F:ESRI.ArcGIS.Client.WebMap.Document.ItemIdProperty">
+            <summary>
+            The arcgis.com ItemId for the individual layer.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Document.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ESRI.ArcGIS.Client.WebMap.Document"/> class.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Document.GetIsBaseMap(System.Windows.DependencyObject)">
+            <summary>
+            Gets the IsBaseMap property.
+            </summary>
+            <param name="document">The document.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Document.SetIsBaseMap(System.Windows.DependencyObject,System.Boolean)">
+            <summary>
+            Sets the IsBaseMap property.
+            </summary>
+            <param name="document">The document.</param>
+            <param name="value">if set to <c>true</c> [value].</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Document.GetItemAsync(System.String,System.Object)">
+            <summary>
+            Gets map item metadata.
+            </summary>
+            <param name="itemId">The item id.</param>
+            <param name="userToken"> A user-defined object that is passed to 
+            the method invoked when the asynchronous operation completes.</param>
+            <seealso cref="E:ESRI.ArcGIS.Client.WebMap.Document.GetItemCompleted"/>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Document.GetItemInternal(System.String,System.Action{ESRI.ArcGIS.Client.WebMap.ItemInfo,System.Exception})">
+            <summary>
+            Downloads the Item Info JSON and parses the information using the JavaScriptSerializer.
+            </summary>
+            <param name="itemId"></param>
+            <param name="complete"></param>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Document.GetMapAsync(System.String,System.Object)">
+            <summary>
+            Creates a map from ArcGIS Online based on its Item ID.
+            </summary>
+            <param name="itemId">The item ID of an ArcGIS web map in ArcGIS online.</param>
+            <param name="userToken"> A user-defined object that is passed to 
+            the method invoked when the asynchronous operation completes.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Document.CheckMapServiceItems(ESRI.ArcGIS.Client.Map,System.Action)">
+            <summary>
+            This method is used to loop through all layers in the layer collection
+            and check for any items that could be a map service item. map service
+            items contain additional information such as popup info that needs
+            to be added to the layer.
+            </summary>
+            <param name="map">The Map to check for map service items.</param>
+            <param name="callback">callback handler to return from async method.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Document.GetMapServiceItem(ESRI.ArcGIS.Client.Layer,System.Action)">
+            <summary>
+            This method preforms the request based on item id to arcgis.com to see if 
+            any additional information is found for the item. Additional information may
+            be present for map service items if they are configured. If no additional information
+            is configured the reseult should be an empty string.
+            </summary>		
+            <param name="layer">The layer that will recived addtional information if information is found on arcgis.com.</param>
+            <param name="callback">The callback handler to ruturn from async method.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Document.GetMapAsync(ESRI.ArcGIS.Client.WebMap.ItemInfo,System.Object)">
+            <summary>
+            Creates a map from ArcGIS Online based on an Item ID.
+            </summary>
+            <param name="item">The item of an ArcGIS web map in ArcGIS online.</param>
+            <param name="userToken"> A user-defined object that is passed to 
+            the method invoked when the asynchronous operation completes.</param>
+            <seealso cref="M:ESRI.ArcGIS.Client.WebMap.Document.GetItemAsync(System.String,System.Object)"/>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Document.GetMapInternal(ESRI.ArcGIS.Client.WebMap.ItemInfo,System.Action{ESRI.ArcGIS.Client.Map,System.Collections.Generic.IDictionary{System.String,System.Object},ESRI.ArcGIS.Client.Geometry.SpatialReference,System.Exception})">
+            <summary>
+            Gets a map based on an Item ID. Will also update the Map's extent
+            based on the ItemInfo.Extent property.
+            </summary>
+            <param name="item"></param>
+            <param name="complete"></param>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Document.GetMapInternal(System.Uri,System.Action{ESRI.ArcGIS.Client.Map,System.Collections.Generic.IDictionary{System.String,System.Object},ESRI.ArcGIS.Client.Geometry.SpatialReference,System.Exception})">
+            <summary>
+            Downloads WebMapDoc JSON and sends it to the Map JSON parser.
+            </summary>
+            <param name="uri"></param>
+            <param name="complete"></param>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Document.GetMapFromJsonAsync(System.String,System.Object)">
+            <summary>
+            Creates a map from a JSON Web Map Document.
+            </summary>
+            <param name="json">The JSON format of the Web Map Document.</param>
+            <param name="userToken"> A user-defined object that is passed to 
+            the method invoked when the asynchronous operation completes.</param>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.WebMap.Document.GetMapFromJsonInternal(System.String,System.Action{ESRI.ArcGIS.Client.Map,System.Collections.Generic.IDictionary{System.String,System.Object},ESRI.ArcGIS.Client.Geometry.SpatialReference,System.Exception})">
+            <summary>
+            Creates a map from a JSON web map document.
+            </summary>
+            <param name="json">The JSON format of the web map document.</param>
+            <param name="callback">The callback method returning a <seealso cref="T:ESRI.ArcGIS.Client.Map"/> populated 
+            by a layer collection from the given ArcGIS web map ID.</param>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Document.ServerBaseUrl">
+            <summary>
+            Gets or sets the server base URL from where items can be loaded.
+            </summary>
+            <remarks>
+            If not set, defaults to ArcGIS Online: &quot;http://www.arcgis.com/sharing/content&quot;
+            </remarks>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Document.BingToken">
+            <summary>
+            The token for being used by Bing Maps.
+            If this is not set, Bing maps layers will not load until the token
+            has been set.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Document.ProxyUrl">
+            <summary>
+            URL to proxy the requests through when necessary.
+            If this is not set, layers that require a proxy will not be loaded.
+            </summary>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Document.Token">
+            <summary>
+            Gets or sets the token.
+            If this property is not set, non-public documents will not be loaded.
+            </summary>
+            <value>The token.</value>
+        </member>
+        <member name="P:ESRI.ArcGIS.Client.WebMap.Document.GeometryServiceUrl">
+            <summary>
+            Gets or sets the geometry service URL.
+            </summary>
+            <remarks>
+            The geometry service URL is required if the web map document specifies
+            a spatial reference different from WGS84 geographic coordinates or
+            WebMercator. If this is not specified, the map will load at full extent.
+            Note that extent is not set if the map is created from 
+            <see cref="M:ESRI.ArcGIS.Client.WebMap.Document.GetMapFromJsonAsync(System.String,System.Object)"/> and will also load
+            at full extent.
+            </remarks>
+        </member>
+        <member name="E:ESRI.ArcGIS.Client.WebMap.Document.GetMapCompleted">
+            <summary>
+            Fired when the <see cref="M:ESRI.ArcGIS.Client.WebMap.Document.GetMapAsync(System.String,System.Object)"/> completes.
+            </summary>
+        </member>
+        <member name="E:ESRI.ArcGIS.Client.WebMap.Document.GetItemCompleted">
+            <summary>
+            Fired when the <see cref="M:ESRI.ArcGIS.Client.WebMap.Document.GetItemAsync(System.String,System.Object)"/> completes.
+            </summary>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.Toolkit.Utilities.FieldDomainUtils.IsDynamicDomain(ESRI.ArcGIS.Client.Field,ESRI.ArcGIS.Client.FeatureService.FeatureLayerInfo)">
+            <summary>
+            Checks Fields and determines if Field is Dynamic Coded Value Domain (aka Sub Domain)
+            </summary>
+            <param name="field">The field that needs to be checked.</param>
+            <param name="layerInfo">
+            The FeatureLayerInfo that has the information to determine if the field
+            is a dynamic coded value domain (aka Sub Domain).
+            </param>
+            <returns>Boolean value indicating if the field is a DynamicCodedValueDomain (aka Sub Domain)</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.Toolkit.Utilities.FieldDomainUtils.BuildDynamicCodedValueSource(ESRI.ArcGIS.Client.Field,ESRI.ArcGIS.Client.FeatureService.FeatureLayerInfo)">
+            <summary>
+            Builds a DynamicCodedValueSource object used to lookup display value.
+            </summary>
+            <param name="field">The field to build DynamicCodedValueSource for</param>
+            <param name="layerInfo">The FeatureLayerInfo used to lookup all the coded value domains </param>
+            <returns>DynamicCodedValueSource which is a collection of coded value domain values for a field.</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.Toolkit.Utilities.FieldDomainUtils.BuildTypeIDCodedValueSource(ESRI.ArcGIS.Client.Field,ESRI.ArcGIS.Client.FeatureService.FeatureLayerInfo)">
+            <summary>
+            Returns CodedValueSources that make up the display text of each value of the TypeIDField.
+            </summary>
+            <param name="field">TypeIDField</param>
+            <param name="layerInfo">FeatureLayerInof used to construct the CodedValueSources from the FeatureTypes.</param>
+            <returns>CodedValueSoruces that contain code an value matches to all possible TypeIDField values.</returns>
+        </member>
+        <member name="M:ESRI.ArcGIS.Client.Toolkit.Utilities.FieldDomainUtils.BuildCodedValueSource(ESRI.ArcGIS.Client.Field)">
+            <summary>
+            Returns a CodedValueSources object constructed form the CodedValueDomain value.
+            </summary>
+            <param name="field">The field to make a CodedValueSource from.</param>
+            <returns>The CodedValueSources object used for a code to value lookup.</returns>
+        </member>
+    </members>
+</doc>
